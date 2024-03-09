@@ -13,16 +13,16 @@ export class AppComponent {
 
   counter: number = 0;
 
-  increment() {
+  Increment() {
     this.counter++;
   }
-  decrement() {
+  Decrement() {
     this.counter--;
   }
-  reset() {
+  Reset() {
     this.counter = 0;
   }
-  bytwo() {
+  ByTwo() {
     this.counter = this.counter * 2;
   }
 }
