@@ -14,16 +14,22 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-counter' title`, () => {
+  it(`counter should be greater than 0`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-counter');
+    expect(app.counter).toEqual(0);
   });
-
-  it('should render title', () => {
+  it(`counter should be equal to 1`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-counter');
+    const app = fixture.componentInstance;
+    app.increment();
+    expect(app.counter).toEqual(1);
+  });
+  it(`counter should be equal  2`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.increment();
+    app.bytwo();
+    expect(app.counter).toEqual(2);
   });
 });
