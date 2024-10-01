@@ -1,5 +1,5 @@
 <h1>{{ counter }}</h1>
-
+<h2 *ngIf="counter > 10">Counter is > 10 now!</h2>
 <button (click)="Increment()">Increment</button>
 <button (click)="Decrement()">decrement</button>
 <button (click)="Reset()">reset</button>
